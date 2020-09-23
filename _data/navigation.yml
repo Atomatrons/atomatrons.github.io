@@ -1,8 +1,9 @@
-- name: Home
-  link: /
-- name: About
-  link: /about.html
-- name: Blog
-  link: /blog.html
-- name: Staff
-  link: /staff.html
+header:
+  - title: About Our Team
+    url: /aboutOurTeam.html
+  - title: Archive
+    url: /archive.html
+  - title: About
+    url: /about.html
+sidebar:
+  nav: docs-en
