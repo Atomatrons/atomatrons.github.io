@@ -1,0 +1,308 @@
+$color_shiva_blue:  rgba(17, 118, 188, 0.85);
+
+html {
+	background: url("/assets/images/Audrey & Vireli.jpg") no-repeat center fixed;
+	background-size: cover;
+}
+
+body {
+	font: 400 1rem/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+	margin: 0;
+}
+
+.header {
+	background-color: white;
+
+	.main {
+		display: flex;
+
+		width: 100%;
+		max-width: 950px;
+		padding: 0 3rem;
+		margin: 0 auto;
+
+		color: rgba(0, 0, 0, 0.85);
+	}
+
+	.header-title {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		margin-top: 0;
+		margin-bottom: 0;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		-moz-align-items: center;
+		align-items: center;
+		-webkit-flex-wrap: nowrap;
+		-moz-flex-wrap: nowrap;
+		-ms-flex-wrap: none;
+		flex-wrap: nowrap;
+		-webkit-box-flex: 1;
+		-webkit-flex: 1;
+		-moz-box-flex: 1;
+		-moz-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+		height: 5rem;
+		margin-right: 1rem;
+		white-space: nowrap;
+
+		.header-brand {
+			-webkit-box-flex: 1;
+			-webkit-flex: 1;
+			-moz-box-flex: 1;
+			-moz-flex: 1;
+			-ms-flex: 1;
+			flex: 1;
+
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			-moz-align-items: center;
+			align-items: center;
+
+			a {
+				display: inline-block;
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	.navigation {
+		overflow: hidden;
+		overflow-x: auto;
+
+		ul {
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+			height: 5rem;
+			padding-bottom: 0;
+			margin: 0;
+
+			li {
+				margin-top: 0.5rem;
+				margin-bottom: 0.5rem;
+				margin-right: 1rem;
+				list-style-type: none;
+			}
+		}
+	}
+
+	a,
+	a:link,
+	a:visited {
+		color: $color_shiva_blue;
+		font-weight: 400;
+		text-decoration: none !important;
+		-webkit-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+}
+
+input, textarea, select, button {
+	font: 400 1rem/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+	color: rgba(0,0,0,0.85);
+}
+
+button {
+	padding: 0;
+	margin: 0;
+	font-size: 1rem;
+	cursor: pointer;
+	background-color: transparent;
+	border-width: 0;
+	outline: none;
+}
+
+.button, .swiper__button {
+	display: inline-block;
+	font-weight: 700;
+	line-height: 1 !important;
+	text-decoration: none !important;
+	cursor: pointer;
+	outline: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.button--circle {
+	width: 1.9rem;
+	height: 1.9rem;
+	padding: 0.45rem 0.63333333333333rem;
+	font-size: 1rem;
+
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -moz-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	align-items: center;
+	border-radius: 50%;
+}
+
+.button--secondary {
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	color: $color_shiva_blue;
+}
+
+.button--secondary, .button--secondary:link, .button--secondary:visited {
+	background-color: #fff;
+}
+
+.image {
+	max-width: 100%;
+}
+
+.image--sm {
+	width: 8rem;
+}
+
+.mr-3 {
+	margin-right: 1rem;
+}
+
+/////////////////////
+div.front-layer-row {
+	overflow: hidden;
+	height: calc(100vh - 5rem);
+}
+
+img.grayscale {
+	filter: grayscale(100%);
+}
+////////////////////////////
+/*
+img.ken-burns {
+	width: 100vw;
+	animation: kenburns 20s infinite;
+}
+
+@keyframes kenburns {
+    0% {
+      opacity: 0.5;
+    }
+    5% {
+      opacity: 1.0;
+    }
+    90% {
+        transform: scale3d(1.5, 1.5, 1.5) translate3d(-220px, 50px, 200px);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    100% {
+        transform: scale3d(3, 3, 3) translate3d(-220px, 100px, 0px);
+        opacity: 0.5;
+    }
+}
+*/
+//////////////////////////
+
+div.image-stack {
+	position: relative;
+
+	> img {
+		position: absolute;
+	}
+
+	> .overlay {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: calc(100vh - 5rem);
+		width: 100%;
+		position: absolute;
+		z-index: 100;
+
+		.team-info {
+			display: flex;
+			flex-direction: column;
+			color: white; /*$color_shiva_blue;*/
+			font-weight: bold;
+		}
+	}
+}
+img.ken-burns {
+	width: 100vw;
+
+	&.layer1 {
+		animation: kenburns_slideinleft 30s linear 0s infinite;
+	}
+	&.layer2 {
+		animation: kenburns_slideintop 30s linear 0s infinite;
+	}
+}
+
+
+@keyframes kenburns_slideinleft {
+    0% {
+      opacity: 0.5;
+    }
+    2% {
+      opacity: 1.0;
+    }
+    45% {
+        transform: scale3d(1.5, 1.5, 1.5) translate3d(-220px, 50px, 200px);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    50% {
+        transform: scale3d(3, 3, 3) translate3d(-220px, 100px, 0px);
+        opacity: 0.5;
+	}
+	51% {
+		opacity: 0;
+	}
+	95% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes kenburns_slideintop {
+	0% {
+		opacity: 0
+	}
+	45% {
+		opacity: 0;
+	}
+    48% {
+      opacity: 1;
+    }
+    90% {
+        transform: scale3d(1.5, 1.5, 1.5) translate3d(180px, -200px, 200px);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(0, -1000px, 0);
+        opacity: 1;
+	}
+}
