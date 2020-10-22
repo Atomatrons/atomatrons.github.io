@@ -20,7 +20,7 @@ body { font: 400 1rem/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helveti
 
 .header a, .header a:link, .header a:visited { color: rgba(17, 118, 188, 0.85); font-weight: 400; text-decoration: none !important; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
-input, textarea, select, button { font: 400 1rem/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; color: rgba(0, 0, 0, 0.85); }
+input, textarea, select, button { font: 400 1rem/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; color: rgba(0, 0, 0, 0.85); }
 
 button { padding: 0; margin: 0; font-size: 1rem; cursor: pointer; background-color: transparent; border-width: 0; outline: none; }
 
@@ -38,7 +38,19 @@ button { padding: 0; margin: 0; font-size: 1rem; cursor: pointer; background-col
 
 .mr-3 { margin-right: 1rem; }
 
-div.front-layer-row { overflow: hidden; height: calc(100vh - 5rem); }
+div.front-layer-row { position: relative; overflow: hidden; }
+
+div.front-layer-row.full-height { height: calc(100vh - 5rem); }
+
+div.front-layer-row.full-height div.divider-top { top: calc(100vh - 5rem - 5rem); }
+
+div.front-layer-row.half-height { height: calc(50vh); }
+
+div.front-layer-row.half-height div.divider-top { top: calc(50vh - 5rem); }
+
+div.front-layer-row.quarter-height { height: calc(25vh); }
+
+div.front-layer-row.quarter-height div.divider-top { top: calc(25vh - 5rem); }
 
 img.grayscale { filter: grayscale(100%); }
 
@@ -51,6 +63,14 @@ div.image-stack > .overlay { display: flex; justify-content: center; align-items
 
 div.image-stack > .overlay .team-info { display: flex; flex-direction: column; color: white; /*$color_shiva_blue;*/ font-weight: bold; }
 
+div.divider-top { position: absolute; z-index: 200; width: 100%; }
+
+div.divider-bottom { position: absolute; z-index: 200; top: 0; width: 100%; }
+
+.svg-blue { fill: #1176bc; }
+
+.svg-yellow { fill: #f7ef22; }
+
 img.ken-burns { width: 100vw; }
 
 img.ken-burns.layer1 { animation: kenburns_slideinleft 30s linear 0s infinite; }
@@ -58,7 +78,7 @@ img.ken-burns.layer1 { animation: kenburns_slideinleft 30s linear 0s infinite; }
 img.ken-burns.layer2 { animation: kenburns_slideintop 30s linear 0s infinite; }
 
 @keyframes kenburns_slideinleft { 0% { opacity: 0.5; }
-  2% { opacity: 1.0; }
+  2% { opacity: 1; }
   45% { transform: scale3d(1.5, 1.5, 1.5) translate3d(-220px, 50px, 200px);
     animation-timing-function: ease-in;
     opacity: 1; }

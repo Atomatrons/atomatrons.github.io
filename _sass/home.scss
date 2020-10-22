@@ -1,4 +1,6 @@
-$color_shiva_blue:  rgba(17, 118, 188, 0.85);
+$color_shiva_blue: rgba(17, 118, 188, 0.85);
+$color_shiva_blue_solid: rgb(17, 118, 188);
+$color_shiva_yellow: rgb(247, 239, 34);
 
 html {
 	background: url("/assets/images/Audrey & Vireli.jpg") no-repeat center fixed;
@@ -113,9 +115,12 @@ body {
 	}
 }
 
-input, textarea, select, button {
-	font: 400 1rem/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-	color: rgba(0,0,0,0.85);
+input,
+textarea,
+select,
+button {
+	font: 400 1rem/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+	color: rgba(0, 0, 0, 0.85);
 }
 
 button {
@@ -128,7 +133,8 @@ button {
 	outline: none;
 }
 
-.button, .swiper__button {
+.button,
+.swiper__button {
 	display: inline-block;
 	font-weight: 700;
 	line-height: 1 !important;
@@ -171,7 +177,9 @@ button {
 	color: $color_shiva_blue;
 }
 
-.button--secondary, .button--secondary:link, .button--secondary:visited {
+.button--secondary,
+.button--secondary:link,
+.button--secondary:visited {
 	background-color: #fff;
 }
 
@@ -189,8 +197,32 @@ button {
 
 /////////////////////
 div.front-layer-row {
+	position: relative;
 	overflow: hidden;
-	height: calc(100vh - 5rem);
+
+	&.full-height {
+		height: calc(100vh - 5rem);
+
+		div.divider-top {
+			top: calc(100vh - 5rem - 5rem);
+		}
+	}
+
+	&.half-height {
+		height: calc(50vh);
+
+		div.divider-top {
+			top: calc(50vh - 5rem);
+		}
+	}
+
+	&.quarter-height {
+		height: calc(25vh);
+
+		div.divider-top {
+			top: calc(25vh - 5rem);
+		}
+	}
 }
 
 img.grayscale {
@@ -247,6 +279,25 @@ div.image-stack {
 		}
 	}
 }
+
+div.divider-top {
+	position: absolute;
+	z-index: 200;
+	width: 100%;
+}
+div.divider-bottom {
+	position: absolute;
+	z-index: 200;
+	top: 0;
+	width: 100%;
+}
+.svg-blue {
+	fill: $color_shiva_blue_solid;
+}
+.svg-yellow {
+	fill: $color_shiva_yellow;
+}
+
 img.ken-burns {
 	width: 100vw;
 
@@ -258,22 +309,21 @@ img.ken-burns {
 	}
 }
 
-
 @keyframes kenburns_slideinleft {
-    0% {
-      opacity: 0.5;
-    }
-    2% {
-      opacity: 1.0;
-    }
-    45% {
-        transform: scale3d(1.5, 1.5, 1.5) translate3d(-220px, 50px, 200px);
-        animation-timing-function: ease-in;
-        opacity: 1;
-    }
-    50% {
-        transform: scale3d(3, 3, 3) translate3d(-220px, 100px, 0px);
-        opacity: 0.5;
+	0% {
+		opacity: 0.5;
+	}
+	2% {
+		opacity: 1;
+	}
+	45% {
+		transform: scale3d(1.5, 1.5, 1.5) translate3d(-220px, 50px, 200px);
+		animation-timing-function: ease-in;
+		opacity: 1;
+	}
+	50% {
+		transform: scale3d(3, 3, 3) translate3d(-220px, 100px, 0px);
+		opacity: 0.5;
 	}
 	51% {
 		opacity: 0;
@@ -288,21 +338,21 @@ img.ken-burns {
 
 @keyframes kenburns_slideintop {
 	0% {
-		opacity: 0
+		opacity: 0;
 	}
 	45% {
 		opacity: 0;
 	}
-    48% {
-      opacity: 1;
-    }
-    90% {
-        transform: scale3d(1.5, 1.5, 1.5) translate3d(180px, -200px, 200px);
-        animation-timing-function: ease-in;
-        opacity: 1;
-    }
-    100% {
-        transform: translate3d(0, -1000px, 0);
-        opacity: 1;
+	48% {
+		opacity: 1;
+	}
+	90% {
+		transform: scale3d(1.5, 1.5, 1.5) translate3d(180px, -200px, 200px);
+		animation-timing-function: ease-in;
+		opacity: 1;
+	}
+	100% {
+		transform: translate3d(0, -1000px, 0);
+		opacity: 1;
 	}
 }
