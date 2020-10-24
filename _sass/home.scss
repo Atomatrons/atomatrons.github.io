@@ -213,10 +213,10 @@ div.front-layer-row {
 	}
 
 	&.half-height {
-		height: calc(50vh);
+		height: 60vh;
 
 		div.divider-top {
-			top: calc(50vh - 5rem);
+			top: calc(60vh - 5rem);
 		}
 	}
 
@@ -418,3 +418,7 @@ button.css-button:active {
 	margin-top: 40px;
 	margin-left: calc(33vw + 400px);
   }
+///////////////////
+.social-link {
+	color: white;
+}

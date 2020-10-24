@@ -44,9 +44,9 @@ div.front-layer-row.full-height { height: calc(100vh - 5rem); }
 
 div.front-layer-row.full-height div.divider-top { top: calc(100vh - 5rem - 5rem); }
 
-div.front-layer-row.half-height { height: calc(50vh); }
+div.front-layer-row.half-height { height: 60vh; }
 
-div.front-layer-row.half-height div.divider-top { top: calc(50vh - 5rem); }
+div.front-layer-row.half-height div.divider-top { top: calc(60vh - 5rem); }
 
 div.front-layer-row.quarter-height { height: calc(25vh); }
 
@@ -121,5 +121,7 @@ button.css-button:active { box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px
 .robot-image-section { position: relative; top: -100%; width: 100%; }
 
 .robot-image { width: 300px; margin-top: 40px; margin-left: calc(33vw + 400px); }
+
+.social-link { color: white; }
 
 /*# sourceMappingURL=home.css.map */
